@@ -1,73 +1,135 @@
+import logo from "../../assets/images/ff_logo.webp";
+import { Link } from "react-router-dom";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+  FaYoutube,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+} from "react-icons/fa";
+
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-gradient-to-r from-[#0f172a] to-[#1e293b] text-gray-300 px-6 py-16">
 
-      {/* Top Section */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
 
-        {/* Left - Logo + About */}
+        {/* 🔹 LEFT */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img
-              src="https://via.placeholder.com/40"
-              alt="logo"
-              className="w-10 h-10 rounded-full"
-            />
+            <img src={logo} alt="logo" className="w-10 h-10 rounded-full" />
             <h2 className="text-white font-semibold text-lg">
               Fashion & Future
             </h2>
           </div>
 
-          <p className="text-sm text-gray-400 leading-relaxed">
+          <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
             Where creativity meets excellence. Shaping tomorrow’s fashion
-            leaders since 2008.
+            leaders with innovation and passion.
           </p>
 
           {/* Social Icons */}
           <div className="flex gap-3 mt-6">
-            {["F", "I", "T", "L", "Y"].map((icon, i) => (
-              <div
-                key={i}
-                className="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full hover:bg-yellow-500 hover:text-black cursor-pointer transition"
-              >
-                {icon}
-              </div>
-            ))}
+            {[FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube].map(
+              (Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full hover:bg-yellow-500 hover:text-black transition"
+                >
+                  <Icon size={14} />
+                </a>
+              )
+            )}
           </div>
         </div>
 
-        {/* Middle - Links */}
+        {/* 🔹 MIDDLE */}
         <div>
           <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+
           <ul className="space-y-2 text-sm">
-            <li className="hover:text-yellow-400 cursor-pointer">About Us</li>
-            <li className="hover:text-yellow-400 cursor-pointer">Programs</li>
-            <li className="hover:text-yellow-400 cursor-pointer">Admissions</li>
-            <li className="hover:text-yellow-400 cursor-pointer">Contact</li>
+            <li>
+              <Link to="/about" className="hover:text-yellow-400 transition">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/programs" className="hover:text-yellow-400 transition">
+                Programs
+              </Link>
+            </li>
+            <li>
+              <Link to="/admissions" className="hover:text-yellow-400 transition">
+                Admissions
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-yellow-400 transition">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
-        {/* Right - Contact */}
+        {/* 🔹 RIGHT */}
         <div>
           <h3 className="text-white font-semibold mb-4">Contact</h3>
-          <div className="space-y-2 text-sm">
-            <p>Fashion District</p>
-            <p>New York, NY 10001</p>
-            <p>+1 (555) 123-4567</p>
-            <p>admissions@fashionandfuture.edu</p>
+
+          <div className="space-y-3 text-sm">
+
+            {/* Address */}
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=2nd+Floor+Railway+Road+Sonipat+Haryana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-2 hover:text-yellow-400 transition"
+            >
+              <FaMapMarkerAlt className="mt-1" />
+              <span>
+                2nd Floor, Railway Rd,<br />
+                Above Durga Medical Store,<br />
+                Opp. Parshvnath City,<br />
+                Geeta Colony, Indira Colony,<br />
+                Sonipat, Haryana 131001
+              </span>
+            </a>
+
+            {/* Phone */}
+            <a
+              href="tel:+919876543210"
+              className="flex items-center gap-2 hover:text-yellow-400 transition"
+            >
+              <FaPhoneAlt />
+              +91 98765 43210
+            </a>
+
+            {/* Email */}
+            <a
+              href="mailto:admissions@fashionandfuture.edu"
+              className="flex items-center gap-2 hover:text-yellow-400 transition"
+            >
+              <FaEnvelope />
+              admissions@fashionandfuture.edu
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+      {/* 🔻 Bottom */}
+      <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
 
-        <p>© 2026 Fashion & Future Institute. All rights reserved.</p>
+        <p>© {year} Fashion & Future Institute. All rights reserved.</p>
 
         <div className="flex gap-4 mt-3 md:mt-0">
-          <span className="hover:text-yellow-400 cursor-pointer">Privacy Policy</span>
-          <span className="hover:text-yellow-400 cursor-pointer">Terms of Service</span>
-          <span className="hover:text-yellow-400 cursor-pointer">Cookie Policy</span>
+          <Link to="/privacy" className="hover:text-yellow-400">Privacy</Link>
+          <Link to="/terms" className="hover:text-yellow-400">Terms</Link>
+          <Link to="/cookies" className="hover:text-yellow-400">Cookies</Link>
         </div>
       </div>
     </footer>

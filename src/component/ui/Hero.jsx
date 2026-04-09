@@ -1,5 +1,6 @@
 import React from 'react'
 import bgimg from "../../assets/images/hero.webp"
+import logo from "../../assets/images/ff_logo.webp"
 
 export default function Hero() {
   return (
@@ -17,7 +18,7 @@ export default function Hero() {
         {/* Logo */}
         <div className="flex justify-center mb-6">
           <img
-            src="https://via.placeholder.com/100"
+            src={logo}
             alt="logo"
             className="w-24 h-24 rounded-full border-2 border-yellow-500"
           />
