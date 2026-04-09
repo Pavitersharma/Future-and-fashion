@@ -63,10 +63,12 @@ export default function Program() {
     <>
       <Navbar/>
 
-      <section className="bg-[#e8dfcc] py-20 px-6">
+      
+
+<section className="bg-white py-20 px-6 border-b border-gray-200">
   <div className="max-w-6xl mx-auto text-center">
     
-    <p className="text-sm tracking-[0.2em] text-gray-700 uppercase">
+    <p className="text-sm tracking-[0.2em] text-yellow-500 uppercase font-medium">
       Academic Programs
     </p>
 
@@ -82,7 +84,7 @@ export default function Program() {
   </div>
 </section>
 
-    <section className="bg-gray-100 py-16 px-6">
+    <section className="bg-gray-50 py-16 px-6">
   <div className="max-w-6xl mx-auto">
     
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -97,16 +99,28 @@ export default function Program() {
 
 
 
-<section className=''>
-    <div className="bg-blue-900 p-5 text-white  items-center max-w-full mx-a ">
-        <div className="mx-auto ">
-            <h2 className='py-10 text-5xl  text-center'>Not Sure Which Program Is Right for You?</h2>
-        <p className='text-center text-xl'>Schedule a free consultation with our admissions team to discuss your goals and find <br /> the perfect program for your career aspirations.</p>
-        <div className="flex items-center justify-center mt-5 ">
-            <a href="" className='text-black px-4 py-2 rounded-2xl bg-amber-400 '>Book a consultation</a>
-        </div>
-        </div>
+<section>
+  <div className="bg-[#4b4b4b] py-16 px-6 text-center text-white">
+    
+    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4">
+      Not Sure Which Program Is Right for You?
+    </h2>
+
+    <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+      Schedule a free consultation with our admissions team to discuss your goals and find 
+      the perfect program for your career aspirations.
+    </p>
+
+    <div className="mt-6">
+      <a
+        href="#"
+        className="bg-yellow-500 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-400 transition"
+      >
+        Book a Consultation
+      </a>
     </div>
+
+  </div>
 </section>
     
       <Footer/>
