@@ -1,9 +1,6 @@
-import React from 'react'
-import Navbar from '../component/ui/Navbar'
-import Footer from '../component/ui/Footer'
-
-
-
+import React from "react";
+import Navbar from "../component/ui/Navbar";
+import Footer from "../component/ui/Footer";
 
 const programs = [
   {
@@ -47,92 +44,81 @@ const programs = [
     modules: ["Editorial Styling", "Personal Styling", "Wardrobe Consulting"],
   },
   {
-    tag: "Certificate",
-    title: "Textile Design",
-    desc: "Create innovative textiles using traditional techniques and cutting-edge technologies.",
-    duration: "1 Year",
-    date: "September 2025",
-    modules: ["Print Design", "Weaving", "Textile Manipulation"],
-  },
+  tag: "Diploma",
+  title: "Dress Making Diploma",
+  desc: "Learn the fundamentals of dress making, including pattern drafting, stitching techniques, and garment construction.",
+  duration: "1 Year",
+  date: "September 2025",
+  modules: [
+    "Pattern Drafting",
+    "Garment Construction",
+    "Fabric Cutting",
+    "Sewing Techniques"
+  ]
+},
 ];
 
 export default function Program() {
-
-  
   return (
     <>
-      <Navbar/>
+      <Navbar />
 
-      
+      <section className="bg-white py-20 px-6 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-sm tracking-[0.2em] text-yellow-500 uppercase font-medium">
+            Academic Programs
+          </p>
 
-<section className="bg-white py-20 px-6 border-b border-gray-200">
-  <div className="max-w-6xl mx-auto text-center">
-    
-    <p className="text-sm tracking-[0.2em] text-yellow-500 uppercase font-medium">
-      Academic Programs
-    </p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold mt-4 leading-tight text-gray-900">
+            Shape Your Future in Fashion
+          </h2>
 
-    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold mt-4 leading-tight text-gray-900">
-      Shape Your Future in Fashion
-    </h2>
+          <p className="max-w-2xl mx-auto text-gray-600 mt-6 text-base md:text-lg">
+            Choose from our range of specialized programs designed to prepare
+            you for a successful career in the fashion industry.
+          </p>
+        </div>
+      </section>
 
-    <p className="max-w-2xl mx-auto text-gray-600 mt-6 text-base md:text-lg">
-      Choose from our range of specialized programs designed to prepare you
-      for a successful career in the fashion industry.
-    </p>
+      <section className="bg-gray-50 py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {programs.map((item, index) => (
+              <ProgramCard key={index} {...item} />
+            ))}
+          </div>
+        </div>
+      </section>
 
-  </div>
-</section>
+      <section>
+        <div className="bg-[#4b4b4b] py-16 px-6 text-center text-white">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4">
+            Not Sure Which Program Is Right for You?
+          </h2>
 
-    <section className="bg-gray-50 py-16 px-6">
-  <div className="max-w-6xl mx-auto">
-    
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {programs.map((item, index) => (
-        <ProgramCard key={index} {...item} />
-      ))}
-    </div>
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+            Schedule a free consultation with our admissions team to discuss
+            your goals and find the perfect program for your career aspirations.
+          </p>
 
-  </div>
-</section>
+          <div className="mt-6">
+            <a
+              href="#"
+              className="bg-yellow-500 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-400 transition"
+            >
+              Book a Consultation
+            </a>
+          </div>
+        </div>
+      </section>
 
-
-
-
-<section>
-  <div className="bg-[#4b4b4b] py-16 px-6 text-center text-white">
-    
-    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4">
-      Not Sure Which Program Is Right for You?
-    </h2>
-
-    <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-      Schedule a free consultation with our admissions team to discuss your goals and find 
-      the perfect program for your career aspirations.
-    </p>
-
-    <div className="mt-6">
-      <a
-        href="#"
-        className="bg-yellow-500 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-400 transition"
-      >
-        Book a Consultation
-      </a>
-    </div>
-
-  </div>
-</section>
-    
-      <Footer/>
-
-
+      <Footer />
     </>
-  )
+  );
 }
 const ProgramCard = ({ tag, title, desc, duration, date, modules }) => {
   return (
     <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300 flex flex-col">
-
       {/* Tag */}
       <span className="text-xs bg-gray-100 px-3 py-1 rounded-full w-fit mb-3">
         {tag}
@@ -175,4 +161,3 @@ const ProgramCard = ({ tag, title, desc, duration, date, modules }) => {
     </div>
   );
 };
-
