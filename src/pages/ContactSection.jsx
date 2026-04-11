@@ -91,12 +91,30 @@ const ContactSection = () => {
 
               {/* Call Us */}
               <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex flex-col items-start">
-                <div className="mb-4"><Phone size={24} strokeWidth={1.5} /></div>
-                <h4 className="font-bold text-sm mb-2 text-gray-800">Call Us</h4>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  +1 (555) 123-4567<br />+1 (555) 987-6543
-                </p>
-              </div>
+  <div className="mb-4">
+    <Phone size={24} strokeWidth={1.5} />
+  </div>
+
+  <h4 className="font-bold text-sm mb-2 text-gray-800">Call Us</h4>
+
+  <div className="text-sm text-gray-500 leading-relaxed space-y-1">
+    
+    <a
+      href="tel:+917015231649"
+      className="block hover:text-yellow-500 transition"
+    >
+      📞 +91 70152 31649
+    </a>
+
+    <a
+      href="tel:+919518814815"
+      className="block hover:text-yellow-500 transition"
+    >
+      📞 +91 95188 14815
+    </a>
+
+  </div>
+</div>
 
               {/* Email Us */}
               <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex flex-col items-start">

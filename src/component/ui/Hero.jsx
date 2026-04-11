@@ -1,6 +1,7 @@
 import React from 'react'
 import bgimg from "../../assets/images/hero.webp"
 import logo from "../../assets/images/ff_logo.webp"
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -38,9 +39,9 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="bg-yellow-500 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-400 transition">
+          <Link to="/program" className="bg-yellow-500 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-400 transition">
             Explore Programs →
-          </button>
+          </Link>
 
           <button className="border border-gray-400 px-6 py-3 rounded-full hover:bg-white hover:text-black transition">
             Book a Tour

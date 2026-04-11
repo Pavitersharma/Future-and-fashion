@@ -140,7 +140,7 @@ export default function Footer() {
       <div className="fixed bottom-4 right-4 flex flex-col gap-3 z-50">
          {/* WhatsApp Button */}
          <a
-           href="https://wa.me/917015231649"
+           href="https://wa.me/917015231649?text=Hello%20I%20want%20to%20take%20an%20enquiry%20about%20admissions"
            target="_blank"
            rel="noopener noreferrer"
            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
