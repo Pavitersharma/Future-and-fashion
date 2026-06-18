@@ -1,12 +1,29 @@
-# React + Vite
+# 🎓 Future & Fashion — Fashion Designing Institute
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern website built for **Future & Fashion**, an institute offering 
+Certificate and Diploma courses in Fashion Designing.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
+👉 [View Website](https://future-and-fashion-rez1rgayk-paviter-sharmas-projects.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 About The Project
+This website helps aspiring fashion designers discover courses, 
+explore the institute, and take the first step toward their creative career.
 
-## Expanding the ESLint configuration
+## ✨ Features
+- 📋 Course listings (Certificate & Diploma programs)
+- 🎨 Clean & modern UI
+- 📱 Fully mobile responsive
+- ⚡ Fast loading performance
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **Frontend:** React.js
+- **Styling:** CSS / Tailwind
+- **Deployment:** Vercel
+
+## 📸 Screenshots
+<!-- Add screenshot here after uploading -->
+
+## 👨‍💻 Developer
+Built by [Paviter Sharma](https://github.com/Pavitersharma)  
+🔗 [LinkedIn](https://www.linkedin.com/in/paviter-sharma-43b74b289)
